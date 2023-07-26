@@ -1,0 +1,14 @@
+# root-sync.yaml
+apiVersion: configsync.gke.io/v1beta1
+kind: RootSync
+metadata:
+  name: rootsync-2
+  namespace: config-management-system
+spec:
+  sourceType: git
+  sourceFormat: unstructured
+  git:
+    repo: https://github.com/rpressiani/acm-playground
+    branch: rootsync-2
+    dir: rootsync-2
+    auth: none
